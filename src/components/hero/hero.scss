@@ -1,0 +1,89 @@
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Hero {
+    height: 100%;
+    margin-top: 30px;
+    padding: 0 10%;
+
+    .Main {
+        height: 450px;
+        border-radius: 20px 20px 0 0;
+        background: url(./main.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .Title {
+            font-size: 80px;
+            margin: 80px 0 0 5%;
+        }
+
+        .Buttons {
+            padding: 0 6% 30px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            & button {
+                @include flex;
+                cursor: pointer;
+                border: none;
+                outline: none;
+                height: 35px;
+                width: 130px;
+                border-radius: 5px;
+                font-size: 13px;
+                letter-spacing: 1.5px;
+
+                &:first-child {
+                    background-color: #4d4b51;
+
+                    &:hover {
+                        background-color: #3c3c3d;
+                    }
+
+                    &:active {
+                        background-color: #4d4b51;
+                    }
+
+                    img {
+                        margin-right: 10px;
+                    }
+                }
+
+                &:last-child {
+                    background-color: #F8B319;
+                    color: #000000;
+
+                    &:hover {
+                        background-color: #a87608;
+                        color: #ffffff;
+                    }
+
+                    &:active {
+                        background-color: #F8B319;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media queries
+@media screen and (max-width:520px) {
+    .Hero {
+        padding: 0 3%;
+
+        .Main {
+            .Title {
+                font-size: 70px;
+            }
+        }
+    }
+}

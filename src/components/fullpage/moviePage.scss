@@ -1,0 +1,39 @@
+.Fullpage {
+
+    .Top {
+        display: none;
+        padding-right: 12%;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 50px;
+
+        img {
+            cursor: pointer;
+            transition: scale 0.2s ease-in-out;
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:785px) {
+    .Fullpage {
+        .Top {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width:470px) {
+
+    .Fullpage {
+        .Search {
+            input {
+                width: 80%;
+            }
+        }
+    }
+}
